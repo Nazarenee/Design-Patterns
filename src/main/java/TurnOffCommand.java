@@ -6,7 +6,7 @@ public class TurnOffCommand implements Command{
         this.device = device;
     }
     @Override
-    public void excecute() {
+    public void execute() {
         device.turnOff();
     }
 }
