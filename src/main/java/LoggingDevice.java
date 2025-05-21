@@ -9,7 +9,7 @@ public class LoggingDevice extends DeviceDecorator {
     }
 
     public void turnOff() {
-        System.out.println("Turning off device " + device.getClass());
+        System.out.println("Turning off : " + device.getClass());
         device.turnOff();
     }
 }
