@@ -52,24 +52,24 @@ public class Visualization extends PApplet {
 
     @Override
     public void setup() {
-        surface.setTitle("devices.Room + devices.Light + devices.Fan Visualization");
+        surface.setTitle("Room + Light + Fan Visualization");
 
-        livingRoom = new Room("Living devices.Room");
+        livingRoom = new Room("Living Room");
         kitchen = new Room("Kitchen");
         bathroom = new Room("Bathroom");
 
-        Light livingMain = new Light("Main devices.Light", 255, 255, 200, 80, 120);
-        Light livingAccent = new Light("Accent devices.Light", 100, 200, 255, 200, 220);
-        Light kitchenLight = new Light("Kitchen devices.Light", 255, 255, 255, 120, 120);
-        Light bathroomLight = new Light("Bathroom devices.Light", 0, 0, 255, 140, 120);
+        Light livingMain = new Light("Main Light", 255, 255, 200, 80, 120);
+        Light livingAccent = new Light("Accent Light", 100, 200, 255, 200, 220);
+        Light kitchenLight = new Light("Kitchen Light", 255, 255, 255, 120, 120);
+        Light bathroomLight = new Light("Bathroom Light", 0, 0, 255, 140, 120);
 
         livingRoom.addDevice(livingMain);
         livingRoom.addDevice(livingAccent);
         kitchen.addDevice(kitchenLight);
         bathroom.addDevice(bathroomLight);
 
-        Fan livingFan = new Fan("Ceiling devices.Fan", 200, 100);
-        Fan kitchenFan = new Fan("Kitchen devices.Fan", 180, 200);
+        Fan livingFan = new Fan("Ceiling Fan", 200, 100);
+        Fan kitchenFan = new Fan("Kitchen Fan", 180, 200);
 
         livingRoom.addDevice(livingFan);
         kitchen.addDevice(kitchenFan);
@@ -142,9 +142,9 @@ public class Visualization extends PApplet {
         }
 
         for (Device d : livingRoom.getDevices()) {
-            if (d.getName().equals("Main devices.Light")) {
+            if (d.getName().equals("Main Light")) {
                 moodyModeCommand.addCommand(new TurnOffCommand(d));
-            } else if (d.getName().equals("Accent devices.Light")) {
+            } else if (d.getName().equals("Accent Light")) {
                 moodyModeCommand.addCommand(new TurnOnCommand(d));
             } else if (d instanceof Fan) {
                 moodyModeCommand.addCommand(new TurnOnCommand(d));
@@ -220,7 +220,7 @@ public class Visualization extends PApplet {
         rect(x + 5, y + 5, w - 10, h - 10, 15);
         noStroke();
 
-        if (roomName.equals("Living devices.Room")) {
+        if (roomName.equals("Living Room")) {
             fill(150, 170, 190);
             rect(x + 30, y + h - 80, 160, 50, 10);
 
