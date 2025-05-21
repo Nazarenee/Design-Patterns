@@ -6,7 +6,7 @@ public class TurnOnCommand implements Command{
     }
 
     @Override
-    public void excecute() {
+    public void execute() {
         device.turnOn();
     }
 }
