@@ -1,3 +1,7 @@
+package base;
+
+import base.Device;
+
 public abstract class BaseDevice implements Device {
     private String name;
 

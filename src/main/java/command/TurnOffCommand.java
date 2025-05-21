@@ -1,4 +1,9 @@
-public class TurnOffCommand implements Command{
+package command;
+
+import base.Device;
+import command.Command;
+
+public class TurnOffCommand implements Command {
 
     private Device device;
 

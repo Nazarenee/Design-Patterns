@@ -1,4 +1,8 @@
-public class Light extends BaseDevice{
+package devices;
+
+import base.BaseDevice;
+
+public class Light extends BaseDevice {
 
     private int red;
     private int green;

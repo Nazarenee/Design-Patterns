@@ -1,3 +1,7 @@
+package decorator;
+
+import base.Device;
+
 import java.time.LocalDateTime;
 
 public class LoggingDevice extends DeviceDecorator {
