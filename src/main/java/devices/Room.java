@@ -1,7 +1,12 @@
+package devices;
+
+import base.Device;
+import base.DeviceGroup;
+
 import java.util.ArrayList;
 import java.util.List;
 
-public class Room implements DeviceGroup{
+public class Room implements DeviceGroup {
     private String name;
     private List<Device> devices = new ArrayList<>();
 

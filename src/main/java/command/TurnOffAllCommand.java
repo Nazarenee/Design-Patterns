@@ -1,4 +1,9 @@
-public class TurnOffAllCommand implements Command{
+package command;
+
+import base.DeviceGroup;
+import command.Command;
+
+public class TurnOffAllCommand implements Command {
 
     DeviceGroup deviceGroup;
 

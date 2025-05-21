@@ -1,7 +1,11 @@
+package command;
+
+import command.Command;
+
 import java.util.ArrayList;
 import java.util.List;
 
-public class MacroCommand implements Command{
+public class MacroCommand implements Command {
     private List<Command> commands = new ArrayList<>();
     private String name;
 
@@ -22,6 +26,6 @@ public class MacroCommand implements Command{
 
     @Override
     public String toString() {
-        return "MacroCommand: " + name;
+        return "command.MacroCommand: " + name;
     }
 }

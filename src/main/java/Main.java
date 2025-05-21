@@ -1,12 +1,17 @@
+import base.Device;
+import command.*;
+import devices.Room;
+import factory.DeviceFactory;
+
 public class Main {
     public static void main(String[] args) {
-        Room livingRoom = new Room("Living Room");
+        Room livingRoom = new Room("Living devices.Room");
         Room kitchen = new Room("Kitchen");
 
-        Device livingRoomLight = DeviceFactory.createDevice("light", "Main Light");
-        Device accentLight = DeviceFactory.createDevice("light", "Accent Light");
+        Device livingRoomLight = DeviceFactory.createDevice("light", "Main devices.Light");
+        Device accentLight = DeviceFactory.createDevice("light", "Accent devices.Light");
 
-        Device kitchenLight = DeviceFactory.createDevice("logginglight", "Kitchen Light");
+        Device kitchenLight = DeviceFactory.createDevice("logginglight", "Kitchen devices.Light");
 
 
         livingRoom.addDevice(livingRoomLight);
@@ -27,15 +32,15 @@ public class Main {
 
         RemoteControl remote = new RemoteControl();
 
-        System.out.println("\n--- Basic Room Control ---");
+        System.out.println("\n--- Basic devices.Room Control ---");
         remote.setCommand(turnOnLivingRoom);
         remote.execute();
 
-        System.out.println("\n--- Individual Device Control ---");
+        System.out.println("\n--- Individual base.Device Control ---");
         remote.setCommand(turnOnKitchen);
         remote.execute();
 
-        System.out.println("\n--- Macro Command Example ---");
+        System.out.println("\n--- Macro command.Command Example ---");
         remote.setCommand(eveningMode);
         remote.execute();
 

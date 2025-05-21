@@ -1,3 +1,7 @@
+package command;
+
+import command.Command;
+
 import java.util.Stack;
 
 public class RemoteControl {
